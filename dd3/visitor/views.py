@@ -36,3 +36,5 @@ def render_javascript2(request):
 	context_dict = {'data_as_json': alist}
 	return render(request, 'logs.html', context_dict)
 
+def render_javascript3(request):
+	return render(request, 'scatterplot.html')
