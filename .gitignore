@@ -56,4 +56,8 @@ docs/_build/
 # PyBuilder
 target/
 
+# virtualenv
 .venv/
+
+# swap files
+*.swp
