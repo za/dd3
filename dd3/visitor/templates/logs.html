@@ -1,8 +1,15 @@
 <html>
 
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'stylesheet.css' %}" />
+<body>Test return in json. Click `view source`.</body>
+slices
+
+<script type="text/javascript" src="{% static 'd3.js' %}"></script>
 <script>
-	var data = {{ data_as_json|safe }}
+	var logs = {{ data_as_json|safe }};
+
 </script>
 
-<body>Test return in json. Click `view source`.</body>
+
 </html>
