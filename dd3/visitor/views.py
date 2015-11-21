@@ -15,9 +15,12 @@ def text(request):
 	return render(request, 'index.html', context_dict)
 
 def render_javascript(request):
-	lists = [8, 5, 4]
-	lists_as_json = json.dumps(lists)
-	context_dict = {'lists_as_json': lists_as_json}
+	lists = [
+		  { "date": "2015-11-28", "visit": 10 },
+		  { "date": "2015-10-09", "visit": 8 },
+		  { "date": "2015-11-01", "visit": 25 },
+		]
+	context_dict = {'lists_as_json': lists}
 	return render(request, 'lists.html', context_dict)
 
 def render_javascript2(request):
