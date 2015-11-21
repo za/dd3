@@ -20,3 +20,12 @@ def render_javascript(request):
 	context_dict = {'lists_as_json': lists_as_json}
 	return render(request, 'lists.html', context_dict)
 
+def render_javascript2(request):
+	apaches = Apache.objects.all()
+	abc = []
+	for apache in apaches:
+		abc.append(apache)
+	data_as_json = json.dumps(data.__dict__)
+	context_dict = {'data_as_json': data_as_json}
+	return render(request, 'logs.html', context_dict)
+
