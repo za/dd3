@@ -1,0 +1,19 @@
+<html>
+
+<head>
+<title>Aloha!</title>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'stylesheet.css' %}" />
+</head>
+
+<body>
+<h2>Heading</h2>
+<p>Paragraph</p>
+	<ul>
+		{% for apache in apaches %}
+		<li>{{ apache.date }} | {{ apache.visit }}</li>
+		{% endfor %}
+	</ul>
+</body>
+
+</html>

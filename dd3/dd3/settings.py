@@ -56,7 +56,8 @@ ROOT_URLCONF = 'dd3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/za/dev/github/za/dd3/dd3/html/'],
+        #'DIRS': ['/home/za/dev/github/za/dd3/dd3/html/'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

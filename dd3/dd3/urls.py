@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^text/$', views.text),
 	url(r'^js/$', views.render_javascript),
-	url(r'^logs/$', views.render_javascript2),
 ]
