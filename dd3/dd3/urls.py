@@ -20,5 +20,6 @@ from visitor import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-	url(r'^apache/$', views.index),
+	url(r'^text/$', views.text),
+	url(r'^js/$', views.render_javascript),
 ]
