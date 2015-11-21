@@ -25,10 +25,14 @@ def render_javascript(request):
 
 def render_javascript2(request):
 	apaches = Apache.objects.all()
-	abc = []
+	alist = []
 	for apache in apaches:
-		abc.append(apache)
-	data_as_json = json.dumps(data.__dict__)
-	context_dict = {'data_as_json': data_as_json}
+		dateformat = "%Y-%m-%d %H:%M:%S" #2015-11-21 18:36:00
+		date_dict1 = apache.date
+		date_dict2 = date_dict1.strftime(dateformat)
+		adict = {'date': date_dict2, 'visit': apache.visit}
+		alist.append(adict)
+
+	context_dict = {'data_as_json': alist}
 	return render(request, 'logs.html', context_dict)
 
