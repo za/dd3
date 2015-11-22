@@ -2,10 +2,13 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.db import connections
 from django.db.models import Count
+from django.contrib import admin
 
 from visitor.models import Apache
 
 import json
+
+admin.site.register(Apache)
 
 # Create your views here.
 
